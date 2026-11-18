@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "b1a2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+		"name": "Toko API - CodeIgniter 4",
+		"description": "Collection API untuk modul Operasi CRUD dengan API CodeIgniter 4 dan Flutter tokokita",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrasi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"Administrator\",\n    \"email\": \"admin@admin.com\",\n    \"password\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/toko-api/public/registrasi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"registrasi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/toko-api/public/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Produk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kode_produk\": \"A001\",\n    \"nama_produk\": \"Realme Smart TV 50 Inch\",\n    \"harga\": 5700000\n}"
+				},
+				"url": {
+					"raw": "http://localhost/toko-api/public/produk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"produk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Produk",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/toko-api/public/produk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"produk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Produk (Detail)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/toko-api/public/produk/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"produk",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Produk",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kode_produk\": \"A001\",\n    \"nama_produk\": \"Samsung TV 60 Inch\",\n    \"harga\": 7800000\n}"
+				},
+				"url": {
+					"raw": "http://localhost/toko-api/public/produk/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"produk",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Produk",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/toko-api/public/produk/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"toko-api",
+						"public",
+						"produk",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+
