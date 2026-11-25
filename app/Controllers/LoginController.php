@@ -13,11 +13,20 @@ class LoginController extends RestfulController
         $password = $this->request->getVar('password');
 
         $model = new MMember();
-        $member = $model->where(['email' => $email])->first();
-        if (!$member) {
+        $members = $model->where(['email' => $email])->findAll();
+        if (empty($members)) {
             return $this->responseHasil(400, false, "Email tidak ditemukan");
         }
-        if (!password_verify($password, $member['password'])) {
+
+        $member = null;
+        foreach ($members as $m) {
+            if (password_verify($password, $m['password'])) {
+                $member = $m;
+                break;
+            }
+        }
+
+        if (!$member) {
             return $this->responseHasil(400, false, "Password tidak valid");
         }
 

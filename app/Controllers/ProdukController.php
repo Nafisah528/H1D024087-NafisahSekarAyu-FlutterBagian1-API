@@ -44,17 +44,16 @@ class ProdukController extends RestfulController
 
         $model = new MProduk();
         $model->update($id, $data);
-        $produk = $model->find($id);
 
-        return $this->responseHasil(200, true, $produk);
+        return $this->responseHasil(200, true, true);
     }
 
     public function hapus($id)
     {
         $model = new MProduk();
-        $produk = $model->delete($id);
+        $model->delete($id);
 
-        return $this->responseHasil(200, true, $produk);
+        return $this->responseHasil(200, true, true);
     }
 }
 

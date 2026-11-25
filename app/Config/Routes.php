@@ -13,5 +13,7 @@ $routes->group('produk', function ($routes) {
     $routes->get('/', 'ProdukController::list');
     $routes->get('(:segment)', 'ProdukController::detail/$1');
     $routes->put('(:segment)', 'ProdukController::ubah/$1');
+    $routes->post('(:segment)/update', 'ProdukController::ubah/$1');
+    $routes->post('(:segment)', 'ProdukController::ubah/$1');
     $routes->delete('(:segment)', 'ProdukController::hapus/$1');
 });

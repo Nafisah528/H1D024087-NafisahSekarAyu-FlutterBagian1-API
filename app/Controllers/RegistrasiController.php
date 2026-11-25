@@ -15,7 +15,12 @@ class RegistrasiController extends RestfulController
         ];
 
         $model = new MRegistrasi();
-        $model->save($data);
+        $existing = $model->where('email', $data['email'])->first();
+        if ($existing) {
+            $model->update($existing['id'], $data);
+        } else {
+            $model->save($data);
+        }
         return $this->responseHasil(200, true, "Registrasi Berhasil");
     }
 }
